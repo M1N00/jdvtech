@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .element {
+        opacity: 0.2; /* Initially invisible */
+        transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    }
+
+    .element.visible { /* J'ai créer .visible avec js pour savoir quand on regarde le div */
+        opacity: 1; /* Fully visible */
+    }
+</style>
+<body>
+    <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+        <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+        <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+        <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+        <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+        <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+        <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+        <div class="element">
+        <h1>Bonjour,ceci est le div numéro 1</h1>
+    </div>
+
+    <div class="element">
+        <img src="https://www.jdvtech.ch/images/JDVTECH/FVE%20LABO%20JANV040008.jpg" alt="">
+    </div>
+
+    <div class="element">
+        <p>Voici le div numéro 3</p>
+    </div>
+    
+
+    <p>lien</p>
+</body> 
+<script>
+    // Créer un IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Si l'élément est visible dans la fenêtre
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    });
+
+    // Observer tous les éléments avec la classe .element
+    document.querySelectorAll('.element').forEach(element => {
+        observer.observe(element);
+    });
+</script>
+</html>
