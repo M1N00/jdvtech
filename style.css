@@ -281,3 +281,67 @@ nav input{
   font-size: 45px;
   font-weight: 600;
 }
+
+
+.control-ring{
+  position: relative;
+  width: 800px;
+  max-width: 90%;
+  aspect-ratio: 1;
+  margin: 60px auto;
+}
+
+.center-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.center-img img{
+  width: 240px;
+}
+
+/* Nouveaux boutons */
+.ring-button{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+}
+
+.ring-button img{
+  width: 50px;
+}
+
+
+
+.ring-button:hover img{
+  filter: invert(0.3);
+}
+
+/* Position */
+.top{ top: 0; left: 50%; transform: translateX(-50%); }
+.right{ right: 0; top: 50%; transform: translateY(-50%); }
+.bottom{ bottom: 0; left: 50%; transform: translateX(-50%); }
+.left{ left: 0; top: 50%; transform: translateY(-50%); }
+
+/* Lignes */
+.line{
+  position: absolute;
+  background: rgb(0, 0, 0);
+  z-index: -1;
+}
+
+
+.top-line{ width: 2px; height: 140px; top: 90px; left: 50%; transform: translateX(-50%); }
+.bottom-line{ width: 2px; height: 140px; bottom: 90px; left: 50%; transform: translateX(-50%); }
+.right-line{ height: 2px; width: 140px; right: 90px; top: 50%; transform: translateY(-50%); }
+.left-line{ height: 2px; width: 140px; left: 90px; top: 50%; transform: translateY(-50%); }

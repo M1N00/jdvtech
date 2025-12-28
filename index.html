@@ -28,11 +28,34 @@
         <video autoplay muted loop id="myVideo" style="width: 100%;">
             <source src="img/img-1.mp4" type="video/mp4">
         </video>
-        <div class="title">Test du menu</div>
-        <div class="sub-title">
-            Super template trouvé sur 
-            <a href="https://prismic.io/blog/css-menus">prismic.io</a>
+
+        <div class="control-ring">
+            <div class="center-img">
+                <img src="img/img-10.jpeg"/>
+            </div>
+
+            <button class="ring-button top">
+                <img src="img/task-checklist.png">
+            </button>
+
+            <button class="ring-button right">
+                <img src="img/task-checklist.png">
+            </button>
+
+            <button class="ring-button bottom">
+                <img src="img/task-checklist.png">
+            </button>
+
+            <button class="ring-button left">
+                <img src="img/task-checklist.png">
+            </button>
+
+            <span class="line top-line"></span>
+            <span class="line right-line"></span>
+            <span class="line bottom-line"></span>
+            <span class="line left-line"></span>
         </div>
+    
 
     </div>
 </body> 
@@ -52,6 +75,14 @@
     // Observer tous les éléments avec la classe .ApparitionStylé
     document.querySelectorAll('.ApparitionStylé').forEach(ApparitionStylé => {
         observer.observe(ApparitionStylé);
+    });
+
+    // Scroll to show bottom 50% of video on page load
+    window.addEventListener('load', () => {
+        const video = document.getElementById('myVideo');
+        const videoTop = video.offsetTop;
+        const videoHeight = video.offsetHeight;
+        window.scrollTo(0, videoTop + videoHeight * 0.5);
     });
 </script>
 </html>
