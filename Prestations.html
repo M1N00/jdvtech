@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voumard Ingénieurs Conseils</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="index.html">Logo</a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="Activités.html">Activités</a></li>
+                <li><a href="Prestations.html">Prestations</a></li>
+                <li><a href="Références.html">Références</a></li>
+                <li><a href="Contacts.html">Contacts</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+
+    <div class="body-text" style="padding: 10px;">
+        
+        <h1>Prestations</h1>
+        <p style="font-size: large;">Nos études comprennent toutes les prestations ordinaires et spécifiques pour permettre la réalisation d'une installation sanitaires complète.</p>
+
+        <div class="cards-container">
+        <div class="card">
+            <img src="img/img-9.jpeg" alt="Mon image">
+            <p style="font-size: large;">Plans et schémas</p>
+        </div>
+        <div class="card">
+            <img src="img/img-10.jpeg" alt="Mon image">
+            <p style="font-size: large;">Rapports et descriptions</p>
+        </div>
+        <div class="card">
+            <img src="img/img-11.jpeg" alt="Mon image">
+            <p style="font-size: large;">???????</p>
+        </div>
+        <div class="card">
+            <img src="img/img-12.jpeg" alt="Mon image">
+            <p style="font-size: large;">Autorisations</p>
+        </div>
+        <div class="card">
+            <img src="img/img-13.jpeg" alt="Mon image">
+            <p style="font-size: large;">??????????</p>
+        </div>
+        <div class="card">
+            <img src="img/img-14.jpeg" alt="Mon image">
+            <p style="font-size: large;">???????</p>
+        </div>
+
+        <div class="card">
+            <img src="img/img-15.jpeg" alt="Mon image">
+            <p style="font-size: large;">?????</p>
+        </div>
+        <div class="card">
+            <img src="img/img-16.jpeg" alt="Mon image">
+            <p style="font-size: large;"></p>
+        </div>
+        <div class="card">
+            <img src="img/img-17.jpeg" alt="Mon image">
+            <p style="font-size: large;"></p>
+        </div>
+        <div class="card">
+            <img src="img/img-18.jpeg" alt="Mon image">
+            <p style="font-size: large;"></p>
+        </div>
+
+        <div class="card">
+            <img src="img/img-19.jpeg" alt="Mon image">
+            <p style="font-size: large;"></p>
+        </div>
+        <div class="card">
+            <img src="img/img-20.jpeg" alt="Mon image">
+            <p style="font-size: large;"></p>
+        </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p><i class="fas fa-map-marker-alt"></i>Ch. des chambrettes 1a<br>1131 Tolochenaz, Suisse VD</p>
+                <p><i class="fas fa-envelope"></i>carim.voumard@viconseils.ch</p>
+                <p><i class="fas fa-phone"></i>078 728 35 02</p>
+                <a href="Contacts.html" style="color: aliceblue;">plus d'information</a>
+            </div>
+        </div>
+    </footer>
+</body> 
+<script>
+    // Créer un IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Si l'élément est visible dans la fenêtre
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    });
+
+    // Observer tous les éléments avec la classe .ApparitionStylé
+    document.querySelectorAll('.ApparitionStylé').forEach(ApparitionStylé => {
+        observer.observe(ApparitionStylé);
+    });
+</script>
+</html>

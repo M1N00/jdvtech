@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voumard Ingénieurs Conseils</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="index.html">Logo</a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="Activités.html">Activités</a></li>
+                <li><a href="Prestations.html">Prestations</a></li>
+                <li><a href="Références.html">Références</a></li>
+                <li><a href="Contacts.html">Contacts</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+
+    <div class="body-text">
+       
+    
+
+    </div>
+</body> 
+<script>
+    // Créer un IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Si l'élément est visible dans la fenêtre
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    });
+
+    // Observer tous les éléments avec la classe .ApparitionStylé
+    document.querySelectorAll('.ApparitionStylé').forEach(ApparitionStylé => {
+        observer.observe(ApparitionStylé);
+    });
+</script>
+</html>
