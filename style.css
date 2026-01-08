@@ -491,3 +491,25 @@ footer {
   object-fit: cover;
   border-radius: 8px;
 }
+
+.loader {
+    border: 3px solid #f3f3f3; /* gris clair */
+    border-top: 3px solid #3498db; /* bleu */
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
