@@ -10,7 +10,7 @@
 <body>
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href="index.html">Logo</a></div>
+            <div class="logo" style="margin-top: 30px;"><a href="index.html"><img src="img/cropped-logo.png" alt="Logo" style="height: 70px;"></a></div>
             <input type="radio" name="slider" id="menu-btn">
             <input type="radio" name="slider" id="close-btn">
             <ul class="nav-links">
@@ -101,7 +101,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     const formData = new FormData(form);
 
     try {
-        const response = await fetch("http://127.0.0.1:80/api/backend.php", {
+        const response = await fetch("/backend.php", {
             method: "POST",
             body: formData
         });
